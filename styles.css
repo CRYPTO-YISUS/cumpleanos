@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #1a1a1a, #333333); /* Fondo de gradiente */
+    color: #ffffff; /* Texto blanco */
+    font-family: "Times New Roman", Times, serif; /* Cambiado el tipo de letra */
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 30px; /* Aumentado el espacio inferior */
+    animation: textScale 5s linear infinite alternate, blink 2s linear infinite; /* Animación de escala para las letras y parpadeo */
+}
+
+.balloons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.balloon {
+    width: 70px; /* Aumentado el tamaño */
+    height: 98px; /* Aumentado el tamaño */
+    border-radius: 50%;
+    position: absolute;
+    background-color: transparent; /* Fondo transparente */
+    animation: balloonMove 10s linear infinite, balloonColor 5s linear infinite alternate;
+}
+
+@keyframes balloonMove {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
+
+@keyframes balloonColor {
+    to {
+        background-color: hsl(random(360), 100%, 70%); /* Colores brillantes */
+    }
+}
+
+@keyframes textScale {
+    from {
+        transform: scale(1); /* Tamaño normal */
+    }
+    to {
+        transform: scale(1.5); /* Tamaño aumentado */
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
