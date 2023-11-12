@@ -10,18 +10,25 @@
     <div class="container">
         <div class="message">
             <center>
-                <h1>Feliz Cumpleaños Dani</h1>
-                <h3>¡Espero que tengas un día maravilloso!</h3>
-                <h3>TQM</h3>
+                <h1 id="t1" class="t1">Feliz Cumpleaños Dani</h1>
+                <h3 id="t2" class="t2">¡Espero que tengas un día maravilloso!</h3>
+                <h5 id="t3" class="t3">TQM</h5>
             </center>
+        </div>
+
+        <div class="button">
+            <!-- Nuevo botón con triángulo de play y texto oculto -->
+            <button id="startButton" class="play-button">
+                <span class="play-icon">&#9654;</span>
+            </button>
         </div>
         <div class="balloons">
             <!-- Balloons go here -->
         </div>
     </div>
 
-    <!-- Agrega la etiqueta audio para la música -->
-    <audio controls loop>
+    <!-- Agrega el elemento de audio para la música -->
+    <audio id="myAudio" loop>
         <source src="music.mp3" type="audio/mp3">
         Tu navegador no soporta el elemento de audio.
     </audio>

@@ -6,6 +6,37 @@ body {
     font-family: "Times New Roman", Times, serif; /* Cambiado el tipo de letra */
 }
 
+.play-button {
+    background-color: #4caf50; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    padding: 20px; /* Relleno interno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Bordes redondeados para hacerlo circular */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    position: relative; /* Posición relativa para alinear el triángulo */
+}
+
+.play-icon {
+    font-size: 24px; /* Tamaño del triángulo */
+}
+
+.t1{
+    display: none; /* inicialmente oculta el texto */
+}
+
+.t2{
+    display: none; /* inicialmente oculta el texto */
+}
+
+.t3{
+    display: none; /* inicialmente oculta el texto */
+}
+
+.play-button.active .button{
+    display: none;
+}
+
 .container {
     position: relative;
     width: 100vw;
